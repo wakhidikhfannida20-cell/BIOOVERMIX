@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website resmi produk kami. Temukan produk, layanan, blog, galeri, dan informasi kontak. Website modern, responsif, dan mudah digunakan di seluruh perangkat.">
+    <meta name="keywords" content="produk, layanan, blog, galeri, kontak, testimoni, FAQ, pesan WA, email">
+    <meta name="author" content="Tim Development Produk Kami">
+    <title>Produk Kami - Home</title>
+    <!-- Tailwind CSS untuk desain responsif dan modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Analytics placeholder (ganti GA_MEASUREMENT_ID dengan ID aktual Anda) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <style>
+        /* CSS custom untuk animasi ringan dan responsivitas tambahan */
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .nav-link { transition: color 0.3s ease; }
+        .nav-link:hover { color: #f59e0b; }
+        .fade-in { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
+        @keyframes fadeIn { to { opacity: 1; } }
+        .section { display: none; }
+        .active { display: block; }
+        .mobile-menu { display: none; transform: translateY(-100%); transition: transform 0.3s ease; }
+        .mobile-menu.open { display: block; transform: translateY(0); }
+        .hamburger { display: none; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 999; justify-content: center; align-items: center; }
+        .modal.active { display: flex; }
+        .faq-item { border-bottom: 1px solid #e5e7eb; margin-bottom: 10px; }
+        .faq-question { cursor: pointer; }
+        .faq-answer { display: none; padding-top: 10px; }
+        @media (max-width: 768px) {
+            .menu { display: none; }
+            .hamburger { display: block; }
+        }
+        /* Loading cepat: minimalisir resource, gunakan CSS untuk layout */
+        img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header dengan Logo, Navigasi, dan Tombol Hubungi -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold text-blue-600">Produk Kami</h1>
+            </div>
+            <!-- Navigasi Desktop -->
+            <nav class="menu hidden md:flex space-x-6">
+                <a href="#" class="nav-link" data-section="home">Home</a>
+                <a href="#" class="nav-link" data-section="about">Tentang Kami</a>
+                <a href="#" class="nav-link" data-section="products">Produk/Layanan</a>
+                <a href="#" class="nav-link" data-section="blog">Blog/Artikel</a>
+                <a href="#" class="nav-link" data-section="gallery">Galeri</a>
+                <a href="#" class="nav-link" data-section="contact">Kontak</a>
+                <a href="#" class="nav-link" data-section="testimonials">Testimoni</a>
+                <a href="#" class="nav-link" data-section="faq">FAQ</a>
+            </nav>
+            <!-- Tombol Hubungi Desktop -->
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/6282329213732?text=Pesan%20produk" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">Pesan via WA</a>
+                <a href="mailto:bioovermix@gmail.com" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Email Kami</a>
+                <button class="hamburger md:hidden bg-gray-800 text-white px-2 py-1 rounded" onclick="toggleMobileMenu()">☰</button>
+            </div>
+        </div>
+        <!-- Navigasi Mobile -->
+        <nav class="mobile-menu bg-white shadow-lg">
+            <ul class="py-4 px-6 space-y-4">
+                <li><a href="#" class="block nav-link" data-section="home" onclick="toggleMobileMenu()">Home</a></li>
+                <li><a href="#" class="block nav-link" data-section="about" onclick="toggleMobileMenu()">Tentang Kami</a></li>
+                <li><a href="#" class="block nav-link" data-section="products" onclick="toggleMobileMenu()">Produk/Layanan</a></li>
+                <li><a href="#" class="block nav-link" data-section="blog" onclick="toggleMobileMenu()">Blog/Artikel</a></li>
+                <li><a href="#" class="block nav-link" data-section="gallery" onclick="toggleMobileMenu()">Galeri</a></li>
+                <li><a href="#" class="block nav-link" data-section="contact" onclick="toggleMobileMenu()">Kontak</a></li>
+                <li><a href="#" class="block nav-link" data-section="testimonials" onclick="toggleMobileMenu()">Testimoni</a></li>
+                <li><a href="#" class="block nav-link" data-section="faq" onclick="toggleMobileMenu()">FAQ</a></li>
+                <li><a href="https://wa.me/6282329213732?text=Pesan%20produk" class="block bg-green-500 text-white px-4 py-2 rounded text-center">Pesan via WA</a></li>
+                <li><a href="mailto:bioovermix@gmail.com" class="block bg-blue-500 text-white px-4 py-2 rounded text-center">Email Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sections -->
+    <!-- Home Section -->
+<section id="home" class="section active fade-in">
+<div class="bg-gradient-to-r from-green-800 to-green-600 text-white py-20 px-8">
+   
+<div class="container mx-auto grid md:grid-cols-2 gap-8 items-center">
+      
+      <!-- Text Content -->
+      <div class="text-left animate-fadeInUp">
+        <h2 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-wide drop-shadow-lg">
+          BIOOVERMIX
+        </h2>
+        <p class="text-xl md:text-2xl font-light italic mb-6">
+          Circular Economy in Action ♻️🌱 <br> Sustainable For Environmental
+        </p>
+        <a href="#products" 
+           class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold 
+                  hover:bg-gray-100 hover:scale-105 transition transform inline-block shadow-lg"
+           onclick="showSection('products')">
+          🌿 Lihat Produk
+        </a>
+      </div>
+
+      <!-- Image Content -->
+      <div class="flex justify-center">
+        <img src="\Users\ASUS\OneDrive - Universitas Diponegoro\Documents/bioovermix1.jpg" 
+             alt="Produk Bioovermix"
+             class="rounded-2xl shadow-2xl w-80 md:w-[400px] hover:scale-105 transition transform duration-500"/>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+   
+    <!-- About Section -->
+    <section id="about" class="section fade-in">
+        <div class="container mx-auto py-16 px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Tentang Kami</h2>
+            <p class="text-justify mb-4">39% sampah di Indonesia adalah limbah organik. Sebagian besar berakhir di tempat pembuangan, mencemari tanah, dan menghasilkan gas rumah kaca. BiooVermix hadir untuk membalikkan keadaan.
+Didirikan oleh mahasiswa Universitas Diponegoro pada 2025, kami mengubah limbah organik menjadi emas hijau lewat budidaya cacing tanah Lumbricus rubellus. Dari tangan kami lahir VermixCompospupuk organik yang menyuburkan tanah, VermixPlus pakan ikan dan unggas berprotein tinggi, serta cacing hidup untuk pertanian,perikanan, dan hobi.
+Namun, BiooVermix bukan sekadar bisnis. Kami adalah gerakan. Gerakan untuk membangun pertanian berkelanjutan, memberdayakan masyarakat, dan menginspirasi generasi muda agar peduli pada lingkungan. Melalui pelatihan, kolaborasi, dan inovasi, kami menghubungkan limbah yang terbuang menjadi peluang yang menguntungkan..</p>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="\Users\ASUS\OneDrive - Universitas Diponegoro\Documents/bioovermix3.jpg" alt="Tim kerja di ruang kantor modern dengan laptop, papan tulis, dan tanaman hijau, suasana kolaboratif" class="rounded-lg shadow-lg" />
+                </div>
+                <div>
+                   <h3 class="text-2xl font-semibold mb-4">Visi & Misi</h3>
+<p class="text-justify mb-4">
+    Menjadi pelopor agribisnis hijau berbasis pengolahan limbah organik yang menghadirkan produk bernilai tinggi 
+    untuk pertanian, peternakan, dan perikanan berkelanjutan, sekaligus menciptakan dampak positif bagi lingkungan 
+    dan kesejahteraan masyarakat.
+</p>
+<ol class="list-decimal list-inside space-y-2 text-justify">
+    <li>Mengolah limbah organik menjadi pupuk dan pakan bernilai tinggi untuk pertanian, peternakan, dan perikanan berkelanjutan.</li>
+    <li>Meningkatkan produktivitas dan efisiensi usaha tani, ternak, dan budidaya ikan melalui inovasi ramah lingkungan.</li>
+    <li>Memberdayakan masyarakat lewat pelatihan, kemitraan, dan edukasi agribisnis hijau berbasis ekonomi sirkular.</li>
+</ol>
+		 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section fade-in">
+        <div class="container mx-auto py-16 px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Produk & Layanan</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg cursor-pointer" onclick="showProductDetail(1)">
+
+
+                   <img src="\Users\ASUS\OneDrive - Universitas Diponegoro\Documents/ujicoba pelet html2.jpg" 
+     alt="Pelet ikan Vermix Plus dalam kemasan 250gr" 
+     class="rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold mb-2">Pelet Ikan</h3>
+			<p class="text-justify mb-4">
+	Pelet pakan ikan bernutrisi tinggi berbahan dasar cacing yang dikombinasikan dengan 	bekatul agar memperoleh nutrisi yang kompleks, bermanfaat untuk mempercepat 	pertumbuhan ikan, menurunkan rasio konversi pakan (FCR), meningkatkandaya cerna, 	serta tidak mencemari air. Tersedia dalam kemasan 250 g</p>
+                    <a href="https://wa.me/6282329213732?text=Pesan%20Produk%201" class="bg-green-500 text-white px-4 py-2 rounded mt-4 inline-block">Pesan Sekarang</a>
+                </div>
+                <!-- Tambahkan produk lainnya dengan format serupa -->
+                <div class="bg-white p-6 rounded-lg shadow-lg cursor-pointer" onclick="showProductDetail(2)">
+                   <img src="\Users\ASUS\OneDrive - Universitas Diponegoro\Documents/ujicoba pupuk html.jpg" 
+     alt="Pelet ikan Vermix Plus dalam kemasan 250gr" 
+     class="rounded-lg mb-4" />
+
+                    <h3 class="text-xl font-semibold mb-2">VermixCompost</h3>
+                    <p class="text-justify mb-4">
+	Pupuk organik padat yang diolah dari media bekas budidaya cacing Lumbricus rubellus 	dengan metode flow-through vermicomposting yang bermanfaat untuk meningkatkan hasil 	panen, memperbaiki pH tanah (6.6-7.5), mengurangi penggunaan pupuk kimia, serta 	ramah lingkunggan dengan biaya produksi yang rendah. Tersedia dalam kemasan 1 kg 	dan 5 kg.</p>
+                    <a href="https://wa.me/6282329213732?text=Pesan%20Produk%202" class="bg-green-500 text-white px-4 py-2 rounded mt-4 inline-block">Pesan Sekarang</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg cursor-pointer" onclick="showProductDetail(3)">
+                    <img src="\Users\ASUS\OneDrive - Universitas Diponegoro\Documents/ujicoba cacing html.jpg" 
+     alt="Pelet ikan Vermix Plus dalam kemasan 250gr" 
+     class="rounded-lg mb-4" />
+
+                    <h3 class="text-xl font-semibold mb-2">Cacing Segar</h3>
+		<p class="text-justify mb-4">
+       	Cacing berkualitas untuk budidaya, pakan ternak, atau hobi memancing. Memiliki 		tingkat reproduksi cepat (1 kg dapat berkembang menjadi 2–3 kg dalam 3 bulan), kaya 	protein dan asam amino, serta berpotensi memberikan tambahan pendapatan. Tersedia 	dalam kemasan 1kg.</p>
+                    <a href="https://wa.me/6282329213732?text=Pesan%20Produk%203" class="bg-green-500 text-white px-4 py-2 rounded mt-4 inline-block">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal">
+        <div class="bg-white p-8 rounded-lg max-w-md mx-4 text-center">
+            <h2 id="productTitle" class="text-2xl font-bold mb-4"></h2>
+            <img id="productImage" src="" alt="" class="rounded-lg mb-4" />
+            <p id="productDesc" class="mb-4">Detail lengkap produk.</p>
+            <button onclick="closeModal()" class="bg-gray-500 text-white px-4 py-2 rounded">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section fade-in">
+        <div class="container mx-auto py-16 px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Blog & Artikel</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <article class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f076f591-4650-4311-a677-3ca8f720f0ae.png" alt="Artikel blog tentang inovasi produk dengan grafik dan chart warna-warni" class="rounded-lg mb-4" />
+                    <h3 class="text-xl font-semibold mb-2">Judul Artikel 1</h3>
+                    <p>Ringkasan artikel. Baca selengkapnya untuk detailnya.</p>
+                    <a href="#" class="text-blue-600 mt-4 inline-block">Baca Lebih Lanjut</a>
+                </article>
+                <!-- Tambahkan artikel lainnya -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section fade-in">
+        <div class="container mx-auto py-16 px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Galeri</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="\Users\ASUS\OneDrive - Universitas Diponegoro\Documents/galeri01.jpg" alt="Gambar produk di penggunaan sehari-hari, seperti di dapur dengan cahaya natural" class="rounded-lg shadow-lg" />
+                <img src="\Users\ASUS\OneDrive - Universitas Diponegoro\Documents/galeri02.jpg" alt="Foto tim kerja sambil presentasi di ruang meeting elegan" class="rounded-lg shadow-lg" />
+		 <img src="\Users\ASUS\OneDrive - Universitas Diponegoro\Documents/galeri03.jpg" alt="Foto tim kerja sambil presentasi di ruang meeting elegan" class="rounded-lg shadow-lg" />
+		 <img src="\Users\ASUS\OneDrive - Universitas Diponegoro\Documents/galeri04.jpg" alt="Foto tim kerja sambil presentasi di ruang meeting elegan" class="rounded-lg shadow-lg" />
+		 <img src="\Users\ASUS\OneDrive - Universitas Diponegoro\Documents/galeri05.jpg" alt="Foto tim kerja sambil presentasi di ruang meeting elegan" class="rounded-lg shadow-lg" />
+                <!-- Tambahkan gambar lainnya -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section fade-in">
+        <div class="container mx-auto py-16 px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Kontak Kami</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <form action="mailto:admin@produkkami.com" method="post" enctype="text/plain" class="bg-white p-6 rounded-lg shadow-lg">
+                    <input type="text" placeholder="Nama" class="w-full mb-4 p-2 border rounded" required>
+                    <input type="email" placeholder="Email" class="w-full mb-4 p-2 border rounded" required>
+                    <textarea placeholder="Pesan" class="w-full mb-4 p-2 border rounded" rows="5" required></textarea>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded w-full">Kirim</button>
+                </form>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="mb-4">Hubungi kami via WA atau Email.</p>
+                    <div class="mb-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.874312098079!2d110.44220873946003!3d-7.053880441992136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708c1c4c64de5b%3A0xb93353faddd1f88!2sFakultas%20Peternakan%20dan%20Pertanian%20Universitas%20Diponegoro!5e0!3m2!1sid!2sid!4v1757436301893!5m2!1sid!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <a href="https://wa.me/6282329213732" class="bg-green-500 text-white px-4 py-2 rounded inline-block mb-2">Chat WA</a>
+                    <a href="mailto:bioovermix@gmai" class="bg-blue-500 text-white px-4 py-2 rounded inline-block">Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section fade-in">
+        <div class="container mx-auto py-16 px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Testimoni</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <img src="\Users\ASUS\OneDrive - Universitas Diponegoro\Documents/testimoni1.jpg" alt="Foto pelanggan wanita tersenyum dengan latar belakang pantai" class="rounded-full mx-auto mb-4" />
+                    <p>"Produk bagus dan laku sekali!"</p>
+                    <p><strong>Pak Tong</strong></p>
+                </div>
+                <!-- Tambahkan testimoni lainnya -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section fade-in">
+        <div class="container mx-auto py-16 px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">FAQ</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-3xl mx-auto">
+                <div class="faq-item">
+                    <h3 class="faq-question text-lg font-semibold cursor-pointer">Pertanyaan 1?</h3>
+                    <p class="faq-answer">Jawaban lengkap di sini.</p>
+                </div>
+                <!-- Tambahkan FAQ lainnya -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-6">
+        <div class="container mx-auto flex justify-between items-center flex-wrap">
+            <p>© 2025 Produk Kami. All rights reserved.</p>
+            <div class="flex space-x-4">
+               
+                <a href="https://www.instagram.com/bioovermix?igsh=Z3JxOGU2aWR4MDV2 " class="hover:text-pink-400 
+transition">Instagram</a>
+               
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Navigasi, Modal, dan FAQ -->
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('[data-section]');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = e.target.dataset.section;
+                showSection(target);
+            });
+        });
+
+        function showSection(id) {
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+            window.scrollTo(0, 0); // Scroll to top
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.querySelector('.mobile-menu');
+            menu.classList.toggle('open');
+        }
+
+        function showProductDetail(id) {
+            const modal = document.getElementById('productModal');
+            const title = document.getElementById('productTitle');
+            const image = document.getElementById('productImage');
+            const desc = document.getElementById('productDesc');
+            if (id === 1) {
+                title.textContent = 'Produk 1 Detail';
+                image.src = 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/55a2c0d1-3d25-4a4a-af1f-cf0d335f5f9b.png';
+                image.alt = 'Detail produk utama dengan elemen dekat seperti tekstur dan warna';
+                desc.textContent = 'Detail lengkap untuk produk 1.';
+            } // Tambahkan untuk id lainnya
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').classList.remove('active');
+        }
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
+```
